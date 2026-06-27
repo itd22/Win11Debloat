@@ -1,0 +1,44 @@
+﻿Version: '1.0'
+Apps:
+  - Microsoft.WindowsAlarms
+  - Microsoft.BingNews
+  - Microsoft.BingSearch
+  - Microsoft.BingWeather
+  - Microsoft.WindowsCalculator
+  - Microsoft.WindowsCamera
+  - Clipchamp.Clipchamp
+  - MicrosoftWindows.CrossDevice
+  - Microsoft.Windows.DevHome
+  - Microsoft.WindowsFeedbackHub
+  - Microsoft.GetHelp
+  - Microsoft.ZuneMusic
+  - Microsoft.Edge, XPFFTQ037JWMHS
+  - Microsoft.WindowsStore
+  - Microsoft.Todos
+  - Microsoft.WindowsNotepad
+  - Microsoft.MicrosoftOfficeHub
+  - Microsoft.Paint
+  - Microsoft.YourPhone
+  - Microsoft.Windows.Photos
+  - Microsoft.PowerAutomateDesktop
+  - MicrosoftCorporationII.QuickAssist
+  - Microsoft.ScreenSketch
+  - Microsoft.MicrosoftSolitaireCollection
+  - Microsoft.WindowsSoundRecorder
+  - Microsoft.MicrosoftStickyNotes
+  - MicrosoftWindows.Client.WebExperience
+  - Microsoft.GamingApp
+  - Microsoft.XboxGamingOverlay
+  - Microsoft.XboxIdentityProvider
+  - Microsoft.XboxSpeechToTextOverlay
+  - Microsoft.Xbox.TCUI
+Deployment:
+  - Name: UserSelectionIndex
+    Value: 0
+  - Name: AppRemovalScopeIndex
+    Value: 0
+  - Name: CreateRestorePoint
+    Value: false
+  - Name: RestartExplorer
+    Value: false
+
