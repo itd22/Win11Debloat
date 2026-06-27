@@ -18,11 +18,12 @@ function ImportConfigToParams {
         throw "Provided config path is not a file: $resolvedConfigPath"
     }
 
-    if ([System.IO.Path]::GetExtension($resolvedConfigPath) -ne '.json') {
-        throw "Provided config file must be a .json file: $resolvedConfigPath"
+    $configExtension = [System.IO.Path]::GetExtension($resolvedConfigPath).ToLowerInvariant()
+    if ($configExtension -notin @('.json', '.yaml', '.yml')) {
+        throw "Provided config file must be a .json, .yaml or .yml file: $resolvedConfigPath"
     }
 
-    $configJson = LoadJsonFile -filePath $resolvedConfigPath -expectedVersion $ExpectedVersion
+    $configJson = LoadConfigFile -filePath $resolvedConfigPath -expectedVersion $ExpectedVersion
     if ($null -eq $configJson) {
         throw "Failed to read config file: $resolvedConfigPath"
     }

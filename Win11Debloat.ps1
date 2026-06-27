@@ -322,6 +322,8 @@ if (-not $script:WingetInstalled -and -not $Silent) {
 
 # File I/O functions
 . "$PSScriptRoot/Scripts/FileIO/LoadJsonFile.ps1"
+. "$PSScriptRoot/Scripts/FileIO/ConfigYaml.ps1"
+. "$PSScriptRoot/Scripts/FileIO/LoadConfigFile.ps1"
 . "$PSScriptRoot/Scripts/FileIO/SaveToFile.ps1"
 . "$PSScriptRoot/Scripts/FileIO/SaveSettings.ps1"
 . "$PSScriptRoot/Scripts/FileIO/LoadSettings.ps1"

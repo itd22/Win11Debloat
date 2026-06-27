@@ -410,9 +410,9 @@ function Export-Configuration {
     # Show native save-file dialog
     $saveDialog = New-Object Microsoft.Win32.SaveFileDialog
     $saveDialog.Title = 'Export Configuration'
-    $saveDialog.Filter = 'JSON files (*.json)|*.json|All files (*.*)|*.*'
-    $saveDialog.DefaultExt = '.json'
-    $saveDialog.FileName = "Win11Debloat-Config-$(Get-Date -Format 'yyyyMMdd').json"
+    $saveDialog.Filter = 'YAML files (*.yaml)|*.yaml|JSON files (*.json)|*.json|All files (*.*)|*.*'
+    $saveDialog.DefaultExt = '.yaml'
+    $saveDialog.FileName = 'win11-debloat.yaml'
 
     if ($saveDialog.ShowDialog($Owner) -ne $true) {
         Write-Host 'Export save dialog canceled.'
@@ -452,8 +452,8 @@ function Import-Configuration {
     # Show native open-file dialog
     $openDialog = New-Object Microsoft.Win32.OpenFileDialog
     $openDialog.Title = 'Select Configuration File'
-    $openDialog.Filter = 'JSON files (*.json)|*.json|All files (*.*)|*.*'
-    $openDialog.DefaultExt = '.json'
+    $openDialog.Filter = 'YAML files (*.yaml;*.yml)|*.yaml;*.yml|JSON files (*.json)|*.json|All files (*.*)|*.*'
+    $openDialog.DefaultExt = '.yaml'
 
     if ($openDialog.ShowDialog($Owner) -ne $true) {
         Write-Host 'Import file dialog canceled.'
@@ -462,7 +462,7 @@ function Import-Configuration {
 
     Write-Host "Importing configuration from '$($openDialog.FileName)'..."
 
-    $config = LoadJsonFile -filePath $openDialog.FileName -expectedVersion '1.0'
+    $config = LoadConfigFile -filePath $openDialog.FileName -expectedVersion '1.0'
     if (-not $config) {
         Write-Error "Failed to read configuration file '$($openDialog.FileName)'"
         Show-MessageBox -Message "Failed to read configuration file" -Title 'Invalid Config' -Button 'OK' -Icon 'Error' | Out-Null
