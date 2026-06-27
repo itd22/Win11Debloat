@@ -1,0 +1,84 @@
+﻿Version: '1.0'
+Tweaks:
+  - Name: DisableStoreSearchSuggestions
+    Value: true
+  - Name: EnableDarkMode
+    Value: true
+  - Name: DisableBitlockerAutoEncryption
+    Value: true
+  - Name: ShowSearchBoxTb
+    Value: true
+  - Name: DisableTelemetry
+    Value: true
+  - Name: DisableWidgets
+    Value: true
+  - Name: DisableLockscreenTips
+    Value: true
+  - Name: DisableAISvcAutoStart
+    Value: true
+  - Name: DisableStartPhoneLink
+    Value: true
+  - Name: StartAllAppsCategory
+    Value: true
+  - Name: PreventUpdateAutoReboot
+    Value: true
+  - Name: DisableDeliveryOptimization
+    Value: true
+  - Name: HideTaskview
+    Value: true
+  - Name: DisableTransparency
+    Value: true
+  - Name: DisableDVR
+    Value: true
+  - Name: DisableSuggestions
+    Value: true
+  - Name: ShowKnownFileExt
+    Value: true
+  - Name: DisableDesktopSpotlight
+    Value: true
+  - Name: DisableModernStandbyNetworking
+    Value: true
+  - Name: EnableEndTask
+    Value: true
+  - Name: ShowHiddenFolders
+    Value: true
+  - Name: RevertContextMenu
+    Value: true
+  - Name: DisableFastStartup
+    Value: true
+  - Name: DisableGameBarIntegration
+    Value: true
+  - Name: DisableNotepadAI
+    Value: true
+  - Name: DisableStickyKeys
+    Value: true
+  - Name: DisableFindMyDevice
+    Value: true
+  - Name: DisableCopilot
+    Value: true
+  - Name: DisableClickToDo
+    Value: true
+  - Name: DisableBing
+    Value: true
+  - Name: DisableRecall
+    Value: true
+  - Name: DisableDragTray
+    Value: true
+  - Name: ExplorerToThisPC
+    Value: true
+  - Name: DisableEdgeAds
+    Value: true
+  - Name: DisableLocationServices
+    Value: true
+  - Name: DisableAnimations
+    Value: true
+Deployment:
+  - Name: UserSelectionIndex
+    Value: 0
+  - Name: AppRemovalScopeIndex
+    Value: 0
+  - Name: CreateRestorePoint
+    Value: false
+  - Name: RestartExplorer
+    Value: false
+
